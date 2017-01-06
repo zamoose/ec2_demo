@@ -12,7 +12,7 @@
         from_port: 22
         to_port: 22
         cidr_ip: 0.0.0.0/0
-    rules_egress:
+    purge_rules_egress: true
   tags: [ 'ec2', 'security_group' ]
 
 - name: Create a named/tagged EC2 instance
