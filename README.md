@@ -47,6 +47,12 @@ OS X users should install [Homebrew](http://brew.sh/) using the method described
 ### Configuring Your Environment
 In order for the Ansible tasks to complete successfully, you will need to alter the provided `runbook.sh` and add your AWS secret account information.
 
+Change these lines to match your preferences (found in the `AWS Account Assumptions` above):
+```
+export AWS_ACCESS_KEY_ID=[Your Access Key ID]
+export AWS_SECRET_ACCESS_KEY=[Your Secret Key]
+export AWS_REGION=[Your preferred AWS region]
+```
 
 ## Running Ansible
 ### Expected Results
