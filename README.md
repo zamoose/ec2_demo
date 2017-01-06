@@ -7,6 +7,9 @@ In order for this project to function correctly, you must be running [Ansible](h
 
 Additionally, you *must* have the Python [Boto](https://pypi.python.org/pypi/boto/) library installed in order for Ansible to be able to use the provided AWS dynamic inventory script.
 
+## Getting the Code
+Simply clone this repository into a convenient location on your intended command machine.
+
 ### Installing Ansible and Boto
 #### Linux
 Linux users may use their distributions' repositories and respective package managers in order to install Ansible and Boto.
