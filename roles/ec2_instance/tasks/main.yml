@@ -1,1 +1,12 @@
 ---
+- name: Create a named/tagged EC2 instance
+  ec2:
+    key_name: "ec2_instance_demo_key"
+    instance_type: t2.micro
+    image: ami-6d1c2007
+    wait: yes
+    exact_count: 1
+    assign_public_ip: yes
+    instance_tags:
+      type: webserver
+  tags: [ 'ec2' ]
