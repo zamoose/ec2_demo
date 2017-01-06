@@ -22,7 +22,6 @@
     group: DemoWebserverSG
     wait: yes
     exact_count: 1
-    assign_public_ip: yes
     instance_tags:
       type: webserver
     count_tag:
