@@ -1,5 +1,5 @@
 ---
-- name: Set up Nginx YUM repository
+- name: Ensure Nginx YUM repository is present and enabled
   copy:
     src: etc/yum.repos.d/nginx.repo
     dest: /etc/yum.repos.d/nginx.repo
@@ -8,3 +8,20 @@
     mode: 0644
   tags: [ 'webserver', 'nginx' ]
 
+- name: Ensure Nginx is installed
+  yum:
+    name: nginx
+    state: installed
+  tags: [ 'webserver', 'nginx' ]
+
+- name: Ensure web and SSH ports are open
+  firewalld:
+    service: "{{ item }}"
+    state: enabled
+    permanent: true
+    immediate: yes
+  with_items:
+    - "http"
+    - "https"
+    - "ssh"
+  tags: [ 'webserver', 'nginx', 'firewall', 'ssh' ]
