@@ -1,0 +1,6 @@
+---
+- name: Create key (if it doesn't already exist)
+  ec2_key:
+    name: ec2_instance_demo_key
+  tags: [ 'keys' ]
+
