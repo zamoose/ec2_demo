@@ -44,3 +44,9 @@
     name: nginx
     state: started
   tags: [ 'webserver', 'nginx' ]
+
+- name: Replace default index.html
+  copy:
+    src: usr/share/nginx/html/index.html
+    dest: /usr/share/nginx/html/index.html
+  tags: [ 'webserver', 'nginx' ]
