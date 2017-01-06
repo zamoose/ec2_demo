@@ -1,3 +1,10 @@
 ---
-- name: Spit out hostname
-  command: "hostname"
+- name: Set up Nginx YUM repository
+copy:
+src: etc/yum.repos.d/nginx.repo
+dest: /etc/yum.repos.d/nginx.repo
+owner: root
+group: root
+mode: 0644
+tags: [ 'nginx' ]
+  
