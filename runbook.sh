@@ -4,7 +4,7 @@ export AWS_ACCESS_KEY_ID=[Your Access Key ID]
 export AWS_SECRET_ACCESS_KEY=[Your Secret Key]
 export AWS_REGION=[Your preferred AWS region]
 
-Echo "Running Ansible to deploy EC2 instance."
+echo "Running Ansible to deploy EC2 instance."
 ansible-playbook playbook.yml
 
 ec2_host=`ansible tag_type_webserver -m ping | grep SUCCESS | cut -f1 -d" "`
