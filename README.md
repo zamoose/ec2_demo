@@ -8,14 +8,6 @@ In order for this project to function correctly, you must be running [Ansible](h
 Additionally, you *must* have the Python [Boto](https://pypi.python.org/pypi/boto/) library installed in order for Ansible to be able to use the provided AWS dynamic inventory script.
 
 ### Installing Ansible and Boto
-#### Mac OS X
-OS X users should install [Homebrew](http://brew.sh/) using the method described on the Homebrew homepage. Once Homebrew is installed and configured correctly<sup id="a2">[2](#footnote2)</sup>, users should execute:
-
-1. `brew install python`
-2. `brew install ansible`
-3. `sudo easy_install pip`
-4. `sudo pip install boto`
-
 #### Linux
 Linux users may use their distributions' repositories and respective package managers in order to install Ansible and Boto.
 
@@ -36,6 +28,14 @@ Ubuntu requires a few more steps in order to install Ansible.
 4. `sudo apt-get install ansible`
 5. `sudo apt-get install python-pip`
 6. `sudo pip install boto`
+
+#### Mac OS X
+OS X users should install [Homebrew](http://brew.sh/) using the method described on the Homebrew homepage. Once Homebrew is installed and configured correctly<sup id="a2">[2](#footnote2)</sup>, users should execute:
+
+1. `brew install python`
+2. `brew install ansible`
+3. `sudo easy_install pip`
+4. `sudo pip install boto`
 
 ### Configuring Your Environment
 
