@@ -1,0 +1,7 @@
+---
+## This Ansible playbook will:
+# 1. Create an AWS EC2 instance running CentOS 7
+# 2. Install the latest mainstream Nginx available
+# 3. Create a simple HTML document displaying a message
+- include: playbooks/ec2_instance.yml
+- include: playbooks/webserver.yml
