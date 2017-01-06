@@ -43,6 +43,7 @@ OS X users should install [Homebrew](http://brew.sh/) using the method described
   * Said IAM identity has an associated ID and secret key
   * You have both ID and secret key readily accessible
 * You have visited the [CentOS 7 AMI page](http://aws.amazon.com/marketplace/pp?sku=aw0evgkw8e5c1q413zgy5pjce) while logged in to this AWS account and have clicked the "Continue" button and accepted the licensing agreement on the page that follows
+* You have a default VPC with an Internet gateway enabled. (Freshly-provisioned AWS accounts should have this out of the box.)
 
 ### Configuring Your Environment
 In order for the Ansible tasks to complete successfully, you will need to alter the provided `runbook.sh` and add your AWS secret account information.
@@ -55,9 +56,12 @@ export AWS_REGION=[Your preferred AWS region]
 ```
 
 ## Running Ansible
+Once you've completed the setup steps above, you should be able to run the entire provisioning process by simply changing into the cloned directory and executing `./runbook.sh`. After a decent amount of time, you will be presented with textual output and a sentence inviting you to point your web browser at the resultant EC2 instance.
+
 ### Expected Results
 * An AWS EC2 `t1.micro` instance
   * Deployed using a CentOS 7 AWS marketplace image
+  * Deployed to your default VPC and subnet
   * Running the latest mainstream Nginx
 * When visited with a web browser, the instance will display the message "Automation for the People".
 
