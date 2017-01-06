@@ -37,6 +37,13 @@ OS X users should install [Homebrew](http://brew.sh/) using the method described
 3. `sudo easy_install pip`
 4. `sudo pip install boto`
 
+### AWS Account Assumptions
+* You already have an AWS account in good standing
+* Said account has an IAM identity able to create EC2 instances
+  * Said IAM identity has an associated ID and secret key
+  * You have both ID and secret key readily accessible
+* You have visited the [CentOS 7 AMI page](http://aws.amazon.com/marketplace/pp?sku=aw0evgkw8e5c1q413zgy5pjce) while logged in to this AWS account and have clicked the "Continue" button and accepted the licensing agreement on the page that follows
+
 ### Configuring Your Environment
 
 ## Running Ansible
