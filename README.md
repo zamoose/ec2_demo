@@ -22,4 +22,7 @@ OS X users should install [Homebrew](http://brew.sh/) using the method described
   * Running the latest mainstream Nginx
 * When visited with a web browser, the instance will display the message "Automation for the People".
 
+===
+### Footnotes
+
 <b id="footnote1">1</b> Homebrew automatically symlinks all the binaries it installs into `/usr/local/bin`. In order for these steps to work correctly, you should have `/usr/local/bin` *prior to any other binary locations* (such as `/bin`, `/usr/bin`, etc.) in your shell's `$PATH` [↩](#a1)
