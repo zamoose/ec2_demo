@@ -31,7 +31,11 @@
       type: webserver
     count_tag:
       type: webserver
-    delete_on_termination: true
+    volumes:
+      - device_name: /dev/xvda
+        device_type: gp2
+        volume_size: 8gb
+        delete_on_termination: true
   register: ec2_web
   tags: [ 'ec2' ]
 
