@@ -48,5 +48,6 @@ Ubuntu requires a few more steps in order to install Ansible.
 
 ===
 ### Footnotes
-<b id="footnote1">1</b>[http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts_micro_instances.html](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts_micro_instances.html)[↩](#a1)
+<b id="footnote1">1</b> [http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts_micro_instances.html](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts_micro_instances.html)[↩](#a1)
+
 <b id="footnote2">2</b> Homebrew automatically symlinks all the binaries it installs into `/usr/local/bin`. In order for these steps to work correctly, you should have `/usr/local/bin` *prior to any other binary locations* (such as `/bin`, `/usr/bin`, etc.) in your shell's `$PATH` [↩](#a2)
