@@ -1,0 +1,13 @@
+---
+- name: Create DO assets
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Set up SSH key
+      digital_ocean:
+        state: present
+        command: ssh
+        name: "Ransom pubkey"
+        ssh_pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4JYbUZd46xFtboGY/ntX8oG4V/w3Zjz6Y+mkTe4oAxpQEvEZPh915cDPryFxumHVN+PJITvqJ7z5cGKEIB8niJkZyTNoje0/6/8DA3nkY5Wecc6G8ZUk3YbfvvOp4JDVIVOUDSLq5sf1Aw3B2iqgX9YStoeHDNPGocpIy9X1YOkGLCEYKhq6Ticz3xaYmDa83KUZ5jI/4a2dAjMkZssAu1ShjumL5Gfj0F8FaXlacHAk+qa5oDSBcuArAfFAfxuU9QYyi5Xqa6SgUbHdbNvZ8VKMvnmnUO0GLd2nblnSPM+WUdWfIBfwD8W5vr8UDrMDG2W2yDGV1yaDSGuv+KUA9 doug.stewart@10up.com"
+        api_token: "a8ef0e025f835d0daa7db3a3a969365901d7861814d8529f554ece7361545c27"

@@ -2,5 +2,15 @@
 - name: Create key (if it doesn't already exist)
   ec2_key:
     name: ec2_instance_demo_key
+    region: us-east-1
+  register: ec2_key
+  tags: [ 'keys' ]
+
+- name: Save private key
+  copy:
+    content: "{{ ec2_key.key.private_key }}"
+    dest: "./aws-private.pem"
+    mode: 0600
+  when: ec2_key.changed
   tags: [ 'keys' ]
 
