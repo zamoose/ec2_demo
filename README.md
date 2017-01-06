@@ -16,6 +16,30 @@ OS X users should install [Homebrew](http://brew.sh/) using the method described
 3. `sudo easy_install pip`
 4. `sudo pip install boto`
 
+#### Linux
+Linux users may use their distributions' repositories and respective package managers in order to install Ansible and Boto.
+
+##### CentOS
+CentOS users should make sure that they have the [EPEL repository](https://fedoraproject.org/wiki/EPEL) installed and enabled before proceeding.
+
+1. `sudo yum install epel-release`
+2. `sudo yum update`
+3. `sudo yum install ansible`
+4. `sudo yum install python2-boto`
+
+##### Ubuntu
+Ubuntu requires a few more steps in order to install Ansible.
+
+1. `sudo apt-get install software-properties-common`
+2. `sudo apt-add-repository ppa:ansible/ansible`
+3. `sudo apt-get update`
+4. `sudo apt-get install ansible`
+5. `sudo apt-get install python-pip`
+6. `sudo pip install boto`
+
+### Configuring Your Environment
+
+## Running Ansible
 ### Expected Results
 * An AWS EC2 `t1.micro` instance
   * Deployed using a CentOS 7 AWS marketplace image
