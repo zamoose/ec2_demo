@@ -31,4 +31,10 @@
       type: webserver
     count_tag:
       type: webserver
+    delete_on_termination: true
+  register: ec2_web
+  tags: [ 'ec2' ]
+
+- name: Wait for the instance to boot by checking the ssh port
+  wait_for: host={{ec2_web.public_ip}} port=22 delay=60 timeout=320 state=started
   tags: [ 'ec2' ]
