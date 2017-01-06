@@ -13,10 +13,6 @@
         to_port: 22
         cidr_ip: 0.0.0.0/0
     rules_egress:
-      - proto: tcp
-        cidr_ip: 0.0.0.0/0
-      - proto: udp
-        cidr_ip: 0.0.0.0/0
   tags: [ 'ec2', 'security_group' ]
 
 - name: Create a named/tagged EC2 instance
