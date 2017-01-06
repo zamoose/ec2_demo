@@ -38,3 +38,9 @@
     - "https"
     - "ssh"
   tags: [ 'webserver', 'nginx', 'firewall', 'ssh' ]
+
+- name: Ensure Nginx is started
+  service:
+    name: nginx
+    state: started
+  tags: [ 'webserver', 'nginx' ]
