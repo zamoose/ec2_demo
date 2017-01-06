@@ -1,5 +1,5 @@
 ---
-- hosts: tag_webserver
+- hosts: tag_type_webserver
 
   roles:
     - webserver
