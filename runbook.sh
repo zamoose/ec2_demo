@@ -11,4 +11,7 @@ ec2_host=`ansible tag_type_webserver -m ping | grep SUCCESS | cut -f1 -d" "`
 
 curl $ec2_host
 
+echo
+echo
 echo "Please visit ${ec2_host} in your web broswer to see the results."
+echo
