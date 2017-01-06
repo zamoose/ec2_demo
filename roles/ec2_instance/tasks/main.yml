@@ -9,4 +9,6 @@
     assign_public_ip: yes
     instance_tags:
       type: webserver
+    count_tag:
+      type: webserver
   tags: [ 'ec2' ]
