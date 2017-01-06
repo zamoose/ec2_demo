@@ -1,9 +1,25 @@
 ---
+- name: Create a Security Group appropriate for a web server
+  ec2_group:
+    name: "DemoWebserverSG"
+    description: "A security group for general web server access."
+    rules:
+      - proto: tcp
+        from_port: 80
+        to_port: 80
+        cidr_ip: 0.0.0.0/0
+      - proto: tcp
+        from_port: 22
+        to_port: 22
+        cidr_ip: 0.0.0.0/0
+  tags: [ 'ec2', 'security_group' ]
+
 - name: Create a named/tagged EC2 instance
   ec2:
     key_name: "ec2_instance_demo_key"
     instance_type: t2.micro
     image: ami-6d1c2007
+    group: DemoWebserverSG
     wait: yes
     exact_count: 1
     assign_public_ip: yes
