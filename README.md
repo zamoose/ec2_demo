@@ -1,6 +1,6 @@
 # Simple EC2 Ansible Spin-Up Demo
 ## In Brief
-This project will spin up an EC2 `t1.micro` instance (using AWS credentials you supply) and will install and configure an Nginx web server and create a static HTML document that displays "Automation for the People".
+This project will spin up an EC2 `t1.micro`<sup id="a1">[1](#footnote1)</sup> instance (using AWS credentials you supply) and will install and configure an Nginx web server and create a static HTML document that displays "Automation for the People".
 
 ## Prerequisites/Requirements
 In order for this project to function correctly, you must be running [Ansible](https://github.com/ansible/ansible) locally. Unfortunately, Ansible-as-master-provisioner does not currently run directly on Windows hosts, so you must be running either Mac OS X or a flavor of Linux in order to run these steps correctly.
@@ -9,7 +9,7 @@ Additionally, you *must* have the Python [Boto](https://pypi.python.org/pypi/bot
 
 ### Installing Ansible and Boto
 #### Mac OS X
-OS X users should install [Homebrew](http://brew.sh/) using the method described on the Homebrew homepage. Once Homebrew is installed and configured correctly<sup id="a1">[1](#footnote1)</sup>, users should execute:
+OS X users should install [Homebrew](http://brew.sh/) using the method described on the Homebrew homepage. Once Homebrew is installed and configured correctly<sup id="a2">[2](#footnote2)</sup>, users should execute:
 
 1. `brew install python`
 2. `brew install ansible`
@@ -48,5 +48,5 @@ Ubuntu requires a few more steps in order to install Ansible.
 
 ===
 ### Footnotes
-
-<b id="footnote1">1</b> Homebrew automatically symlinks all the binaries it installs into `/usr/local/bin`. In order for these steps to work correctly, you should have `/usr/local/bin` *prior to any other binary locations* (such as `/bin`, `/usr/bin`, etc.) in your shell's `$PATH` [↩](#a1)
+<b id="footnote1">1</b>[http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts_micro_instances.html](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts_micro_instances.html)[↩](#a1)
+<b id="footnote2">2</b> Homebrew automatically symlinks all the binaries it installs into `/usr/local/bin`. In order for these steps to work correctly, you should have `/usr/local/bin` *prior to any other binary locations* (such as `/bin`, `/usr/bin`, etc.) in your shell's `$PATH` [↩](#a2)
